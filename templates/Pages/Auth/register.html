@@ -1,0 +1,51 @@
+{% include "layouts/upper.html" %}
+<div
+  class="container-fluid bg-primary d-flex justify-content-center align-items-center custom-height-auth"
+>
+  <div class="w-50 bg-white rounded p-5">
+    <form method="POST">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input
+        name="u_daftar"
+          type="text"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+        name="p_daftar"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          Creating an account means you’re okay with our Terms of Service,
+          Privacy Policy, and our default Notification Settings.
+        </label>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <button type="submit" class="btn btn-primary mt-3">Sign Up</button>
+        </div>
+        <div class="col-md-6 text-end pt-3">
+            Sudah punya akun?
+            <a href="/login" class="fw-bold text-primary">Masuk</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% include "layouts/lower.html" %}

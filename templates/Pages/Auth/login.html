@@ -1,0 +1,39 @@
+{% include "layouts/upper.html" %}
+
+<div
+  class="container-fluid bg-primary d-flex justify-content-center align-items-center custom-height-auth"
+>
+  <div class="w-50 bg-white rounded p-5">
+  {% if error %}
+  <p class=error><strong>Error:</strong> {{ error }} </p>
+  {% endif %}
+    <form method="POST" action="/login">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input
+          name="u_login"
+          type="text"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          name="p_login"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+      </div>
+      <button type="submit" href="" class="btn btn-primary">Sign In</button>
+      <div class="mb-3">
+        Belum punya akun?
+        <a href="/register" class="fw-bold text-primary">Daftar</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% include "layouts/lower.html" %}
